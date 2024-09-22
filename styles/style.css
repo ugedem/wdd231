@@ -1,0 +1,142 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #1c3d6e;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 10px;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: yellow;
+}
+
+main {
+    margin: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.course-work, .location, .courses-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-work h2, .location h2, .courses-section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.location img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.course-filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.course-filters button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #1c3d6e;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.course-filters button:hover {
+    background-color: #1352a2;
+}
+
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.course-card {
+    padding: 20px;
+    text-align: center;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.cse {
+    background-color: #d3ad69;
+}
+
+.wdd {
+    background-color: #a2d9ce;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
