@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Dangote Group",
+        "address": "Union Marble House, 1 Alfred Rewane Road, Ikoyi, Lagos",
+        "phone": "+234 1 448 0815",
+        "website": "https://www.dangote.com/",
+        "image": "images/dangote.png",
+        "membership": "Gold"
+    },
+    {
+        "name": "Guaranty Trust Bank (GTBank)",
+        "address": "Plot 635, Akin Adesola Street, Victoria Island, Lagos",
+        "phone": "+234 700 4826 689",
+        "website": "https://www.gtbank.com/",
+        "image": "images/Gtbank.png",
+        "membership": "Platinum"
+    },
+    {
+        "name": "Interswitch Group",
+        "address": "1648C Oko Awo Street, Victoria Island, Lagos",
+        "phone": "+234 1 906 5000",
+        "website": "https://www.interswitchgroup.com/",
+        "image": "images/Interswitch.jpg",
+        "membership": "Silver"
+    },
+    {
+        "name": "MTN Nigeria",
+        "address": "MTN Plaza, Falomo, Ikoyi, Lagos",
+        "phone": "+234 803 123 0000",
+        "website": "https://www.mtnonline.com/",
+        "image": "images/mtnng.png",
+        "membership": "Gold"
+    },
+    {
+        "name": "Flutterwave",
+        "address": "8 Providence Street, Lekki Phase 1, Lagos",
+        "phone": "+234 1 280 5252",
+        "website": "https://www.flutterwave.com/",
+        "image": "images/flutterwave.png",
+        "membership": "Silver"
+    },
+    {
+        "name": "Jumia Nigeria",
+        "address": "6B, Universal Civil Engineering Close, Agidingbi, Ikeja, Lagos",
+        "phone": "+234 700 600 0000",
+        "website": "https://www.jumia.com.ng/",
+        "image": "images/jumia.png",
+        "membership": "Bronze"
+    },
+    {
+        "name": "Da-real Calabar Kitchen",
+        "address": "Olopomeji Akobo, Ibadan, Oyo State, Nigeria",
+        "phone": "+234 708 430 0371",
+        "website": "#",
+        "image": "images/calabarkitchen.png",
+        "membership": "Gold"
+    }
+]
