@@ -1,4 +1,4 @@
-/* Basic reset */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,137 +6,156 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #f0f0f0;
+    color: black; /* Ensure all general text is black */
 }
 
-header {
-    background-color: #1c3d6e;
-    color: white;
-    padding: 10px 0;
+h1, h2 {
+    color: #3a4d6c; /* Headings will remain in this color */
+}
+
+/* Header */
+.profile-header {
     text-align: center;
+    padding: 20px;
+    background-color: #224B83;
+    color: white; /* General text color in the header */
 }
 
-header .profile-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header img {
-    border-radius: 50%;
+.profile-header img {
     width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-bottom: 10px;
+    border-radius: 50%;
 }
 
-nav ul {
+.profile-header h1 {
+    font-weight: bold; /* Ensure the name is bold */
+    color: black; /* Ensure the name is black */
+}
+
+/* Navigation */
+nav {
     display: flex;
-    justify-content: center;
-    background-color: black;
-    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #224B83;
+    padding: 10px 20px;
+    color: white;
 }
 
-nav ul li {
+ul.menu {
+    display: flex;
     list-style: none;
-    margin: 0 15px;
+    gap: 20px;
 }
 
-nav ul li a {
+ul.menu li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    padding: 5px 10px;
 }
 
-nav ul li a:hover {
-    color: yellow;
-}
-
-main {
-    margin: 20px;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-}
-
-.course-work, .location, .courses-section {
-    background-color: white;
-    padding: 20px;
+ul.menu li a:hover {
+    background-color: #2f6fa3;
     border-radius: 5px;
+}
+
+.hamburger {
+    display: none;
+    background-color: #224B83;
+    color: white;
+    border: none;
+    font-size: 24px;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    color: black; /* Ensure main content text is black */
+}
+
+.course-work, .location, .certificate {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.course-work h2, .location h2, .courses-section h2 {
-    text-align: center;
+.course-work ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: black; /* Ensure list items are black */
+}
+
+/* Location Section */
+.location img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Courses Section */
+.course-filters {
     margin-bottom: 10px;
 }
 
-.location img {
-    width: 100%;
-    border-radius: 5px;
-}
-
-.course-filters {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
 .course-filters button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    background-color: #1c3d6e;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #3a4d6c;
     color: white;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 .course-filters button:hover {
-    background-color: #1352a2;
+    background-color: #2f6fa3;
 }
 
 .courses {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .course-card {
-    padding: 20px;
-    text-align: center;
-    background-color: #f1f1f1;
+    background-color: #f4f4f4;
+    padding: 10px;
     border-radius: 5px;
+    width: 150px;
+    text-align: center;
+    color: black; /* Ensure course card text is black */
 }
 
-.cse {
-    background-color: #d3ad69;
+.course-card.completed {
+    background-color: #d1e7dd;
+    border: 2px solid #28a745;
+    color: #28a745; /* Completed course will appear green */
 }
 
-.wdd {
-    background-color: #a2d9ce;
-}
-
+/* Footer */
 footer {
     text-align: center;
+    padding: 20px;
+    background-color: #224B83;
+    color: white;
     margin-top: 20px;
 }
 
-footer p {
-    margin: 5px 0;
-}
-
-@media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr;
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
     }
 
-    .courses {
-        grid-template-columns: repeat(2, 1fr);
+    ul.menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    ul.menu.active {
+        display: flex;
     }
 }
