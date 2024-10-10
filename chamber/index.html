@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aaron Chamber of Commerce Home Page">
+    <meta name="author" content="Aaron Uwem Edem">
+    <meta property="og:title" content="Aaron Chamber of Commerce">
+    <meta property="og:description" content="Join the Aaron Chamber of Commerce today!">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yourwebsite.com/images/og-image.png">
+    <meta property="og:url" content="https://yourwebsite.com/index.html">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/Hero1.jpg" type="image/x-icon">
+    <title>Aaron Chamber of Commerce</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/logo.png" alt="Aaron Chamber of Commerce Logo" class="logo">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="directory.html">Directory</a>
+                <a href="about.html">About</a>
+                <a href="join.html">Join</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <img src="images/Hero1.jpg" alt="Hero Image " class="hero-image">
+            <div class="hero-text">
+                <h2>Join the Aaron Chamber of Commerce</h2>
+                <a href="join.html" class="cta-button">Join Now</a>
+            </div>
+        </section>
+
+        <!-- Flexbox layout for weather, forecast, and events -->
+        <section id="info-section">
+            <div class="flex-container">
+                <!-- Weather Section -->
+                <div class="weather-section">
+                    <h3>Current Weather</h3>
+                    <p id="current-temp">Loading...</p>
+                    <p id="weather-desc"></p>
+                    <h4>3-Day Forecast</h4>
+                    <ul id="forecast"></ul>
+                </div>
+
+                <!-- Current Events Section -->
+                <div class="events-section">
+                    <h3>Current Events</h3>
+                    <p>Upcoming Business Networking Event: October 15th, 2024</p>
+                    <!-- More events can be dynamically added here -->
+                </div>
+
+                <!-- Company Spotlights Section -->
+                <div class="spotlight-section">
+                    <h3>Company Spotlights</h3>
+                    <div id="spotlight-container">
+                        <!-- JavaScript will inject spotlight companies here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h4>Contact Us</h4>
+                <p>Aaron Chamber of Commerce</p>
+                <p>Gbenku Olodo garage, Ibadan, Nigeria</p>
+                <p>Email: gilbertaaron100@gmail.com</p>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <h4>Follow Us</h4>
+                <a href="https://facebook.com/aaron.gilbert.946179" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://x.com/gilbert_edem" target="_blank">
+                    <img src="images/twitter.png" alt="Twitter">
+                </a>
+                <a href="https://www.linkedin.com/in/aaron-edem-42874a22b/" target="_blank">
+                    <img src="images/linkedin.png" alt="LinkedIn">
+                </a>
+            </div>
+
+            <!-- Footer Bottom Info -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aaron Chamber of Commerce. All rights reserved.</p>
+                <p>Last modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/weather.js" defer></script>
+    <script src="js/spotlight.js" defer></script>
+</body>
+</html>
