@@ -1,28 +1,32 @@
-fetch('data/members.json')
-    .then(response => response.json())
-    .then(members => {
-        // Filter members who are Gold or Silver
-        const spotlightMembers = members.filter(member => ['Gold', 'Silver'].includes(member.membership));
-        
-        // Select 2-3 random spotlight members
-        const selectedSpotlights = getRandomMembers(spotlightMembers, 2);
-        
-        // Display them in the spotlight container
-        const spotlightContainer = document.getElementById('spotlight-container');
-        selectedSpotlights.forEach(member => {
-            spotlightContainer.innerHTML += `
-                <div class="member-spotlight">
-                    <img src="${member.image}" alt="${member.name}">
-                    <h4>${member.name}</h4>
-                    <p>${member.address}</p>
-                    <p>${member.phone}</p>
-                    <a href="${member.website}" target="_blank">Visit Website</a>
-                </div>
-            `;
-        });
-    });
+// spotlight.js
+document.addEventListener("DOMContentLoaded", function() {
+    const spotlightGrid = document.querySelector('.spotlight-grid');
 
-function getRandomMembers(array, num) {
-    const shuffled = array.sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, num);
-}
+    fetch('data/members.json')  // Ensure this path is correct relative to your HTML file
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error loading business data.');
+            }
+            return response.json();
+        })
+        .then(data => {
+            data.forEach(member => {
+                const memberCard = document.createElement('div');
+                memberCard.classList.add('member-card');
+
+                memberCard.innerHTML = `
+                    <img src="${member.image}" alt="${member.name} logo">
+                    <h3>${member.name}</h3>
+                    <p><strong>Address:</strong> ${member.address}</p>
+                    <p><strong>Phone:</strong> ${member.phone}</p>
+                    <p><strong>Membership Level:</strong> ${member.membership}</p>
+                    <a href="${member.website}" target="_blank">Visit Website</a>
+                `;
+
+                spotlightGrid.appendChild(memberCard);
+            });
+        })
+        .catch(error => {
+            spotlightGrid.innerHTML = `<p>Error loading business data: ${error.message}</p>`;
+        });
+});

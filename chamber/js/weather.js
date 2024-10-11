@@ -1,54 +1,48 @@
+// Static weather data (you can replace this with dynamic API data later)
+const weatherData = {
+    current: {
+        temp: '75°F',
+        condition: 'Partly Cloudy',
+        high: '85°F',
+        low: '52°F',
+        humidity: '34%',
+        sunrise: '7:30 AM',
+        sunset: '8:59 PM'
+    },
+    forecast: [
+        { day: 'Today', temp: '90°F' },
+        { day: 'Wednesday', temp: '89°F' },
+        { day: 'Thursday', temp: '68°F' }
+    ]
+};
+
+// Function to display current weather
+function displayCurrentWeather() {
+    const weatherContainer = document.querySelector('.weather-info');
+    weatherContainer.innerHTML = `
+        <p>${weatherData.current.temp}</p>
+        <p>${weatherData.current.condition}</p>
+        <p>High: ${weatherData.current.high}</p>
+        <p>Low: ${weatherData.current.low}</p>
+        <p>Humidity: ${weatherData.current.humidity}</p>
+        <p>Sunrise: ${weatherData.current.sunrise}</p>
+        <p>Sunset: ${weatherData.current.sunset}</p>
+    `;
+}
+
+// Function to display weather forecast
+function displayWeatherForecast() {
+    const forecastContainer = document.querySelector('.forecast ul');
+    forecastContainer.innerHTML = ''; // Clear existing forecast data
+
+    weatherData.forecast.forEach(day => {
+        const forecastItem = `<li><strong>${day.day}:</strong> ${day.temp}</li>`;
+        forecastContainer.innerHTML += forecastItem;
+    });
+}
+
+// Initialize weather display on page load
 document.addEventListener('DOMContentLoaded', () => {
-    const apiKey = '7bb16f955a6e4cc6853db6cacde5f39d';
-    const city = 'Ibadan'; 
-        const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${apiKey}`;
-    
-    // Select weather section
-    const weatherSection = document.getElementById('weather');
-
-    // Fetch weather data
-    fetch(apiUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`API request failed: ${response.status} ${response.statusText}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            displayWeather(data);
-        })
-        .catch(error => {
-            console.error('Error fetching weather data:', error);
-            weatherSection.innerHTML = '<p>Error loading weather data. Please try again later.</p>';
-        });
-
-    // Function to display weather data
-    function displayWeather(data) {
-        const currentWeather = data.list[0]; // Current weather
-        const forecast = data.list.slice(1, 4); // 3-day forecast
-
-        // Capitalize first letter of each word in weather description
-        const description = currentWeather.weather.map(w => 
-            w.description.replace(/\b\w/g, l => l.toUpperCase())).join(', ');
-
-        // Display current weather
-        weatherSection.innerHTML = `
-            <h3>Current Weather</h3>
-            <p>Temperature: ${Math.round(currentWeather.main.temp)}°F</p>
-            <p>Description: ${description}</p>
-            <h4>3-Day Forecast</h4>
-        `;
-
-        // Display 3-day forecast
-        forecast.forEach(day => {
-            const dayDescription = day.weather.map(w => 
-                w.description.replace(/\b\w/g, l => l.toUpperCase())).join(', ');
-
-            weatherSection.innerHTML += `
-                <p><strong>Day:</strong> ${new Date(day.dt_txt).toLocaleDateString()}<br>
-                <strong>Temp:</strong> ${Math.round(day.main.temp)}°F<br>
-                <strong>Description:</strong> ${dayDescription}</p>
-            `;
-        });
-    }
+    displayCurrentWeather();
+    displayWeatherForecast();
 });
