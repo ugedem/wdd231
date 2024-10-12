@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Aaron Uwem Edem</title>
+    <meta name="description" content="Thank you for joining the Aaron Chamber of Commerce. Your application has been successfully submitted, and we look forward to supporting your business.">
+    <meta name="author" content="Aaron Uwem Edem">
+    <meta property="og:title" content="Thank You - Aaron Uwem Edem">
+    <meta property="og:description" content="Your application to the Aaron Chamber of Commerce has been received. We are excited to welcome you!">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join Us</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Thank You for Joining!</h1>
+        <p>We appreciate your interest in joining the Aaron Chamber of Commerce. Below is a summary of your submission:</p>
+
+        <ul>
+            <li><strong>First Name:</strong> <span id="first-name"></span></li>
+            <li><strong>Last Name:</strong> <span id="last-name"></span></li>
+            <li><strong>Email:</strong> <span id="email"></span></li>
+            <li><strong>Mobile Phone:</strong> <span id="phone"></span></li>
+            <li><strong>Organization:</strong> <span id="organization"></span></li>
+            <li><strong>Membership Level:</strong> <span id="membership-level"></span></li>
+            <li><strong>Business Description:</strong> <span id="business-description"></span></li>
+        </ul>
+
+        <p>We will reach out to you soon with the next steps. Thank you for choosing us to support your business.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Aaron Uwem Edem | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('first-name').textContent = params.get('first-name');
+        document.getElementById('last-name').textContent = params.get('last-name');
+        document.getElementById('email').textContent = params.get('email');
+        document.getElementById('phone').textContent = params.get('phone');
+        document.getElementById('organization').textContent = params.get('organization');
+        document.getElementById('membership-level').textContent = params.get('membership-level');
+        document.getElementById('business-description').textContent = params.get('business-description');
+    </script>
+</body>
+
+</html>

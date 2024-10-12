@@ -1,48 +1,29 @@
-// Static weather data (you can replace this with dynamic API data later)
-const weatherData = {
-    current: {
-        temp: '75°F',
-        condition: 'Partly Cloudy',
-        high: '85°F',
-        low: '52°F',
-        humidity: '34%',
-        sunrise: '7:30 AM',
-        sunset: '8:59 PM'
-    },
-    forecast: [
-        { day: 'Today', temp: '90°F' },
-        { day: 'Wednesday', temp: '89°F' },
-        { day: 'Thursday', temp: '68°F' }
-    ]
-};
+// weather.js
+const apiKey = '7bb16f955a6e4cc6853db6cacde5f39d'; 
+const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=Ibadan&appid=${apiKey}&units=metric`;
 
-// Function to display current weather
-function displayCurrentWeather() {
-    const weatherContainer = document.querySelector('.weather-info');
-    weatherContainer.innerHTML = `
-        <p>${weatherData.current.temp}</p>
-        <p>${weatherData.current.condition}</p>
-        <p>High: ${weatherData.current.high}</p>
-        <p>Low: ${weatherData.current.low}</p>
-        <p>Humidity: ${weatherData.current.humidity}</p>
-        <p>Sunrise: ${weatherData.current.sunrise}</p>
-        <p>Sunset: ${weatherData.current.sunset}</p>
+async function getWeather() {
+    try {
+        const response = await fetch(weatherUrl);
+        const data = await response.json();
+        
+        if (response.ok) {
+            displayWeather(data);
+        } else {
+            document.querySelector('.weather-info').innerText = 'Error fetching weather data.';
+        }
+    } catch (error) {
+        document.querySelector('.weather-info').innerText = 'Error fetching weather data.';
+    }
+}
+
+function displayWeather(data) {
+    const weatherInfo = `
+        <h3>${data.name}</h3>
+        <p>Temperature: ${data.main.temp}°C</p>
+        <p>Condition: ${data.weather[0].description}</p>
     `;
+    document.querySelector('.weather-info').innerHTML = weatherInfo;
 }
 
-// Function to display weather forecast
-function displayWeatherForecast() {
-    const forecastContainer = document.querySelector('.forecast ul');
-    forecastContainer.innerHTML = ''; // Clear existing forecast data
-
-    weatherData.forecast.forEach(day => {
-        const forecastItem = `<li><strong>${day.day}:</strong> ${day.temp}</li>`;
-        forecastContainer.innerHTML += forecastItem;
-    });
-}
-
-// Initialize weather display on page load
-document.addEventListener('DOMContentLoaded', () => {
-    displayCurrentWeather();
-    displayWeatherForecast();
-});
+getWeather();

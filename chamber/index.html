@@ -3,34 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aaron Uwem Edem Chamber of Commerce">
-    <meta name="keywords" content="Chamber of Commerce, Business, Directory, Join, Events">
+    <meta name="description" content="Aaron Uwem Edem Chamber of Commerce - Connecting businesses in Nigeria for growth and collaboration.">
+    <meta name="keywords" content="Chamber of Commerce, Businesses, Nigeria, Networking, Community">
     <meta name="author" content="Aaron Uwem Edem">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <!-- Favicon -->
-    <title>Aaron Uwem Edem Chamber of Commerce</title>
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Aaron Uwem Edem Chamber of Commerce">
-    <meta property="og:description" content="Join the Aaron Uwem Edem Chamber of Commerce and connect with local businesses.">
-    <meta property="og:image" content="images/hero3.jpg">
-    <meta property="og:url" content="https://yourwebsite.com">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Aaron Uwem Edem Chamber of Commerce">
-    <meta name="twitter:description" content="Join the Aaron Uwem Edem Chamber of Commerce and connect with local businesses.">
-    <meta name="twitter:image" content="images/hero3.jpg">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Aaron Uwem Edem Chamber of Commerce</title>
 </head>
 <body>
     <header>
         <div class="header-container">
             <img src="images/hero2.jpg" alt="Aaron Chamber of Commerce Logo" class="logo">
-            <h1>Aaron Chamber of Commerce</h1>
+            <h1>Chamber</h1>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="directory.html">Directory</a></li>
-                    <li><a href="#">Join</a></li>
+                    <li><a href="join.html">Join</a></li>
                     <li><a href="#">Discover</a></li>
                 </ul>
             </nav>
@@ -40,47 +29,42 @@
     <main>
         <section class="hero">
             <img src="images/hero3.jpg" alt="Chamber of Commerce" class="hero-image">
-            <button class="join-now">Join Now</button>
+            <a href="join.html" class="call-to-action">Join Us Now!</a>
         </section>
 
         <section class="content">
             <div class="events">
                 <h2>Upcoming Events</h2>
-                <p>Join us for our monthly networking events where local businesses can connect and collaborate. Our next event is scheduled for November 15, 2024, at 5 PM. Don't miss the chance to showcase your business and expand your network!</p>
+                <p>Join us for our upcoming events designed to promote business growth and networking opportunities. From workshops to networking luncheons, there's something for everyone!</p>
+                <p>Stay connected and get the latest updates by subscribing to our newsletter. Together, we can create a thriving business community.</p>
             </div>
 
             <div class="weather">
                 <h2>Current Weather</h2>
                 <div class="weather-info"></div>
             </div>
-
-            <div class="forecast">
-                <h2>Weather Forecast</h2>
-                <ul>
-                    <li>Friday: Sunny, High 30°C, Low 20°C</li>
-                    <li>Saturday: Partly Cloudy, High 28°C, Low 19°C</li>
-                    <li>Sunday: Rain Showers, High 25°C, Low 18°C</li>
-                </ul>
-            </div>
         </section>
 
+        <!-- Business Spotlight Section -->
         <section class="spotlight">
             <h2>Business Spotlight</h2>
-            <div class="spotlight-grid"></div>
-            <p>This month's spotlight is on local businesses that have made significant contributions to the community. Check out the featured businesses to learn more about their services and initiatives!</p>
+            <p>Each month, we highlight a few exceptional businesses that are making waves in their industries. These businesses exemplify what it means to be a part of our chamber and contribute to our community.</p>
+            <div class="spotlight-grid" id="spotlight-grid">
+                <!-- Businesses will be dynamically populated here from the members.json -->
+            </div>
         </section>
     </main>
 
     <footer>
         <div class="footer-info">
             <p>Aaron Chamber of Commerce</p>
-            <p>Gbenku Olodo Garage, Ibadan, Nigeria.</p>
+            <p>Gbenku olodo garage, Ibadan Nigeria.</p>
             <p>Email: gilbertaaron100@gmail.com | Phone: (234) 7084006136</p>
         </div>
         <div class="social-icons">
-            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
-            <a href="https://twitter.com/" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
-            <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="https://www.linkedin.com" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
         </div>
         <p>WDD231 Class Project | Last Modification: <span id="last-modification"></span></p>
     </footer>

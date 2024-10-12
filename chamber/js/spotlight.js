@@ -1,32 +1,24 @@
 // spotlight.js
-document.addEventListener("DOMContentLoaded", function() {
+async function fetchBusinesses() {
+    const response = await fetch('data/members.json');
+    const businesses = await response.json();
+    displayBusinesses(businesses);
+}
+
+function displayBusinesses(businesses) {
     const spotlightGrid = document.querySelector('.spotlight-grid');
+    businesses.forEach(business => {
+        const businessCard = document.createElement('div');
+        businessCard.innerHTML = `
+            <img src="${business.image}" alt="${business.name}" class="business-image">
+            <h3>${business.name}</h3>
+            <p>${business.address}</p>
+            <p>${business.phone}</p>
+            <p><a href="${business.website}" target="_blank">Visit Website</a></p>
+            <p>Membership: ${business.membership}</p>
+        `;
+        spotlightGrid.appendChild(businessCard);
+    });
+}
 
-    fetch('data/members.json')  // Ensure this path is correct relative to your HTML file
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Error loading business data.');
-            }
-            return response.json();
-        })
-        .then(data => {
-            data.forEach(member => {
-                const memberCard = document.createElement('div');
-                memberCard.classList.add('member-card');
-
-                memberCard.innerHTML = `
-                    <img src="${member.image}" alt="${member.name} logo">
-                    <h3>${member.name}</h3>
-                    <p><strong>Address:</strong> ${member.address}</p>
-                    <p><strong>Phone:</strong> ${member.phone}</p>
-                    <p><strong>Membership Level:</strong> ${member.membership}</p>
-                    <a href="${member.website}" target="_blank">Visit Website</a>
-                `;
-
-                spotlightGrid.appendChild(memberCard);
-            });
-        })
-        .catch(error => {
-            spotlightGrid.innerHTML = `<p>Error loading business data: ${error.message}</p>`;
-        });
-});
+fetchBusinesses();

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber - Aaron Uwem Edem</title>
+    <meta name="description" content="Join the Aaron Chamber of Commerce and become part of a community that offers exclusive benefits, special events, and growth opportunities for businesses.">
+    <meta name="author" content="Aaron Uwem Edem">
+    <meta name="google-site-verification" content="your-google-verification-code-here">
+    <meta property="og:title" content="Join the Chamber - Aaron Uwem Edem">
+    <meta property="og:description" content="Become a member of the Aaron Chamber of Commerce to unlock exclusive opportunities and benefits for your business.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/join.html">
+    <meta property="og:image" content="https://yourwebsite.com/images/chamber-image.jpg">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+       
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-top: 2rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+     
+        header nav ul {
+            display: flex;
+            justify-content: flex-end;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin-left: 2rem;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join Us</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Join the Aaron Chamber of Commerce</h1>
+        <form method="get" action="thankyou.html" aria-label="Join the Chamber Form">
+            <label for="first-name">First Name
+                <input type="text" id="first-name" name="first-name" title="Enter your first name" autocomplete="given-name" required>
+            </label>
+            <label for="last-name">Last Name
+                <input type="text" id="last-name" name="last-name" title="Enter your last name" autocomplete="family-name" required>
+            </label>
+            <label for="organization-title">Organizational Title
+                <input type="text" id="organization-title" name="organization-title" title="Enter your organizational title" autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}" required>
+            </label>
+            <label for="email">Email
+                <input type="email" id="email" name="email" title="Enter your email" autocomplete="email" placeholder="example@domain.com" required>
+            </label>
+            <label for="phone">Mobile Phone
+                <input type="tel" id="phone" name="phone" title="Enter your mobile phone number" autocomplete="tel" required>
+            </label>
+            <label for="organization">Organization Name
+                <input type="text" id="organization" name="organization" title="Enter your organization's name" autocomplete="organization" required>
+            </label>
+            <label for="membership-level">Membership Level
+                <select id="membership-level" name="membership-level" title="Select your membership level">
+                    <option value="np">NP Membership (Non-Profit)</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+            </label>
+            <label for="business-description">Business Description
+                <textarea id="business-description" name="business-description" title="Describe your business"></textarea>
+            </label>
+            <input type="hidden" id="timestamp" name="timestamp" value="">
+            <input type="submit" value="Submit">
+        </form>
+
+        <section class="membership-cards">
+            <div class="card" id="np-card">
+                <h2>NP Membership</h2>
+                <a href="#np-modal">View Benefits</a>
+            </div>
+            <div class="card" id="bronze-card">
+                <h2>Bronze Membership</h2>
+                <a href="#bronze-modal">View Benefits</a>
+            </div>
+            <div class="card" id="silver-card">
+                <h2>Silver Membership</h2>
+                <a href="#silver-modal">View Benefits</a>
+            </div>
+            <div class="card" id="gold-card">
+                <h2>Gold Membership</h2>
+                <a href="#gold-modal">View Benefits</a>
+            </div>
+        </section>
+
+        <!-- Modals for membership benefits -->
+        <div id="np-modal" class="modal" role="dialog" aria-labelledby="np-modal-title" aria-hidden="true">
+            <div class="modal-content">
+                <span class="close" aria-label="Close Modal">&times;</span>
+                <h2 id="np-modal-title">NP Membership Benefits</h2>
+                <p>Non-profit organizations enjoy discounted event participation and free advertising slots.</p>
+            </div>
+        </div>
+
+        <div id="bronze-modal" class="modal" role="dialog" aria-labelledby="bronze-modal-title" aria-hidden="true">
+            <div class="modal-content">
+                <span class="close" aria-label="Close Modal">&times;</span>
+                <h2 id="bronze-modal-title">Bronze Membership Benefits</h2>
+                <p>Enjoy access to business events and a free training session annually.</p>
+            </div>
+        </div>
+
+        <div id="silver-modal" class="modal" role="dialog" aria-labelledby="silver-modal-title" aria-hidden="true">
+            <div class="modal-content">
+                <span class="close" aria-label="Close Modal">&times;</span>
+                <h2 id="silver-modal-title">Silver Membership Benefits</h2>
+                <p>Get additional promotional support and discounted training packages.</p>
+            </div>
+        </div>
+
+        <div id="gold-modal" class="modal" role="dialog" aria-labelledby="gold-modal-title" aria-hidden="true">
+            <div class="modal-content">
+                <span class="close" aria-label="Close Modal">&times;</span>
+                <h2 id="gold-modal-title">Gold Membership Benefits</h2>
+                <p>Full access to all chamber events, premium advertising, and exclusive discounts.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Aaron Uwem Edem | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+    </footer>
+
+    <script>
+        // Set timestamp value on form submission
+        document.getElementById('timestamp').value = new Date().toISOString();
+
+        // Modal functionality
+        const modals = document.querySelectorAll('.modal');
+        const links = document.querySelectorAll('.card a');
+        const closeButtons = document.querySelectorAll('.close');
+
+        links.forEach((link, index) => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                document.body.style.overflow = 'hidden'; 
+                modals[index].style.display = 'block';
+            });
+        });
+
+        closeButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                document.body.style.overflow = 'auto'; 
+                modals[index].style.display = 'none';
+            });
+        });
+
+        window.addEventListener('click', (event) => {
+            modals.forEach((modal) => {
+                if (event.target === modal) {
+                    document.body.style.overflow = 'auto'; 
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
