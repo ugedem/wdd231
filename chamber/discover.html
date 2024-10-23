@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Business Directory of Aaron Uwem Edem Chamber of Commerce">
+  <meta name="keywords" content="Business Directory, Chamber of Commerce, Nigeria">
+  <meta name="author" content="Aaron Uwem Edem">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <title>Discover - Aaron Uwem Edem Chamber of Commerce</title>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <img src="images/hero2.jpg" alt="Aaron Chamber of Commerce Logo" class="logo">
+      <h1>Discover</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html" class="active">Discover</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="content">
+      <aside class="sidebar">
+        <div class="visit-info" id="visit-info"></div>
+        <div class="demographics">
+          <h2>Demographics & Stats</h2>
+          <p>Local demographics and statistical data go here...</p>
+        </div>
+        <div class="calendar">
+          <h2>Upcoming Events</h2>
+          <div id="calendar-widget"></div>
+        </div>
+      </aside>
+
+      <section class="main-content">
+        <section class="gallery">
+          <h2>Local Attractions</h2>
+          <div class="spotlight-grid" id="spotlight-members"></div>
+        </section>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-info">
+      <p>Aaron Uwem Edem Chamber of Commerce</p>
+      <p>Gbenku olodo garage, Ibadan Nigeria.</p>
+      <p>Email: gilbertaaron100@gmail.com | Phone: 234 7084006136</p>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="https://www.twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+      <a href="https://www.linkedin.com" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+    </div>
+    <p>WDD231 Class Project | Last Modification: <span id="last-modification"></span></p>
+  </footer>
+
+  <script src="js/spotlight.js"></script>
+  <script>
+    document.getElementById('last-modification').textContent = document.lastModified;
+  </script>
+</body>
+
+</html>
