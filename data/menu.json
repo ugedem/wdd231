@@ -1,0 +1,58 @@
+{
+    "items": [
+        {
+            "name": "Edikang Ikong Soup",
+            "price": {
+                "small": 1200,
+                "medium": 2000,
+                "large": 3000
+            },
+            "image": "pictures/Edikang ikong.jpeg"
+        },
+        {
+            "name": "Afia Efere",
+            "price": {
+                "small": 1200,
+                "medium": 2000,
+                "large": 3000
+            },
+            "image": "pictures/Afia efere.jpeg"
+        },
+        {
+            "name": "Ekpang Nkwukwo",
+            "price": {
+                "small": 1200,
+                "medium": 2000,
+                "large": 3000
+            },
+            "image": "pictures/Ekpang nkwukwo.jpeg"
+        },
+        {
+            "name": "Afang Soup",
+            "price": {
+                "small": 1200,
+                "medium": 2000,
+                "large": 3000
+            },
+            "image": "pictures/Afang.jpg"
+        },
+        {
+            "name": "Ogbono Soup",
+            "price": {
+                "small": 1200,
+                "medium": 2000,
+                "large": 3000
+            },
+            "image": "pictures/Ogbono.jpeg"
+        },
+        {
+            "name": "Banga Soup",
+            "price": {
+                "small": 1200,
+                "medium": 2000,
+                "large": 3000
+            },
+            "image": "pictures/Banga.jpeg"
+        }
+    ]
+}
