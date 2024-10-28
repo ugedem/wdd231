@@ -1,28 +1,29 @@
 body {
-    background-color: #FFFDD0;
-    color: #000;
+    background-color: #a8b8a3;
+    color: #333;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #2E8B57;
-    color: #FFF;
+    background-color: #0c4a0d;
+    color: #fff;
     text-align: center;
     padding: 20px;
 }
 
 h1 {
     font-family: 'Playfair Display', serif;
+    color: #34495e;
 }
 
 h2 {
-    color: #2E8B57;
+    color: #86c9b6;
 }
 
 h3 {
-    color: #2E8B57;
+    color: #86c9b6;
     font-family: 'Playfair Display', serif;
 }
 
@@ -30,15 +31,17 @@ section {
     padding: 20px;
     margin: 0 auto;
     max-width: 800px;
+    background-color: #f8f9fa;
 }
 
 ol {
     padding-left: 20px;
+    color: #555;
 }
 
 footer {
-    background-color: #2E8B57;
-    color: white;
+    background-color: #0c4a0d;
+    color: #fff;
     text-align: center;
     padding: 10px;
 }
