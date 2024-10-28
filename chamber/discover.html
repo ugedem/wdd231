@@ -15,7 +15,7 @@
 <body>
   <header>
     <div class="header-container">
-      <img src="images/hero2.jpg" alt="Aaron Chamber of Commerce Logo" class="logo">
+      <img src="images/hero2.jpg" alt="Aaron Chamber of Commerce Logo" class="logo" loading="lazy">
       <h1>Discover</h1>
       <nav>
         <ul>
@@ -58,15 +58,27 @@
       <p>Email: gilbertaaron100@gmail.com | Phone: (234) 7084006136</p>
     </div>
     <div class="social-icons">
-      <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
-      <a href="https://www.twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
-      <a href="https://www.linkedin.com" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook" loading="lazy"></a>
+      <a href="https://www.twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter" loading="lazy"></a>
+      <a href="https://www.linkedin.com" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" loading="lazy"></a>
     </div>
     <p>WDD231 Class Project | Last Modification: <span id="last-modification"></span></p>
   </footer>
 
   <script src="js/spotlight.js"></script>
   <script>
+    // Store and display last visit date
+    const lastVisitKey = 'lastVisitDate';
+    const lastVisit = localStorage.getItem(lastVisitKey);
+    const visitInfo = document.getElementById('visit-info');
+
+    if (lastVisit) {
+      visitInfo.innerHTML = `Welcome back! Your last visit was on: ${new Date(lastVisit).toLocaleString()}`;
+    } else {
+      visitInfo.innerHTML = 'Welcome to the Discover page!';
+    }
+    localStorage.setItem(lastVisitKey, new Date());
+
     document.getElementById('last-modification').textContent = document.lastModified;
   </script>
 </body>

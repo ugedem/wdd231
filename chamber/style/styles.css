@@ -89,9 +89,9 @@ header nav ul li a:hover {
 
 /* Content Styling */
 .content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Sidebar and Main Content */
+  gap: 1rem;
   margin: 2rem 1rem;
 }
 
@@ -100,8 +100,13 @@ header nav ul li a:hover {
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 30%;
-  margin-bottom: 1rem;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 1.5rem;
 }
 
 /* Form Styling */
@@ -348,5 +353,22 @@ footer p {
 }
 
 .social-icons img:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+  
+  .membership-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .membership-cards .card {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
 }
