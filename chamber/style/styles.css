@@ -355,20 +355,3 @@ footer p {
 .social-icons img:hover {
   transform: scale(1.1);
 }
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  .content {
-    grid-template-columns: 1fr;
-  }
-  
-  .membership-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .membership-cards .card {
-    width: 90%;
-    margin-bottom: 1rem;
-  }
-}
